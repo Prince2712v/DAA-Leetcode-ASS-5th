@@ -1,0 +1,56 @@
+class Solution {
+    public void reverse(int[] arr, int lo,int hi){
+         while(hi>lo){
+            int temp = arr[lo];
+            arr[lo] = arr[hi];
+            arr[hi] = temp ;
+            lo++;
+            hi--;
+        }
+
+    }
+    public void rotate(int[] arr, int k) {
+
+        int lo = 0;
+        int hi = arr.length-1;
+        k = k%arr.length;
+        reverse(arr,0,arr.length-1);
+        reverse(arr,0,k-1);
+        reverse(arr,k,arr.length-1);
+       
+        // int hii = k-1; //2
+        // int lol = 0;
+        // while(hii>lol){
+        //     int temp = arr[hii];
+        //     arr[hii] = arr[lol];
+        //     arr[lol] = temp ;
+        //     lol++;
+        //     hii--;
+
+        // }
+        // int hiii = arr.length-1;
+        // int lv = k;
+        // while(hiii>lv){
+        //     int temp = arr[hiii];
+        //     arr[hiii] = arr[lv];
+        //     arr[lv] = temp;
+        //     lv++;
+        //     hiii--;
+        // }
+
+    }
+}
+
+        // k = k % arr.length;
+        // for(int i=0; i<k;i++){
+        //     int hi = arr.length-1;
+        //     while(hi>0){
+        //         int temp = arr[hi];
+        //         arr[hi] = arr[hi-1];
+        //         arr[hi-1] = temp;
+        //         hi--;
+        //     }
+        // }
+        
+//     }
+// }
