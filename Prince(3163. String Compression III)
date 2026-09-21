@@ -1,0 +1,28 @@
+class Solution {
+    public String compressedString(String s) {
+        //  StringBuilder sb = new StringBuilder();
+        String sb ="";
+        s = s+ "#";
+        char []arr = s.toCharArray() ;
+       int i=0;
+       int j=0;
+       while(j<arr.length){
+        if(arr[i] == arr[j] && j-i < 9){
+         j++;}
+        else{
+            int frq = j-i;
+            char ch = arr[i];
+            sb += frq;
+            sb += ch;
+          i = j;
+        }
+        
+       } 
+//       int frq = j-i;
+//       char ch = arr[i] ;
+//        sb.append(frq);
+//        sb.append(ch);
+//  i =j;
+       return sb ;
+    }
+}
